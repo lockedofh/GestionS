@@ -1,0 +1,5 @@
+-- SQLite
+CREATE TABLE vendors(
+    nif VARCHAR(10) PRIMARY KEY,
+    name VARCHAR(200) NOT NULL
+)
