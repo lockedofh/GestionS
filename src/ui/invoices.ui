@@ -49,7 +49,7 @@
        <widget class="QDateEdit" name="dateStartDate">
         <property name="dateTime">
          <datetime>
-          <hour>19</hour>
+          <hour>18</hour>
           <minute>56</minute>
           <second>58</second>
           <year>2025</year>
@@ -73,7 +73,7 @@
        <widget class="QDateEdit" name="dateEndDate">
         <property name="dateTime">
          <datetime>
-          <hour>19</hour>
+          <hour>18</hour>
           <minute>57</minute>
           <second>36</second>
           <year>2025</year>
@@ -116,6 +116,9 @@
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
      <widget class="QPushButton" name="buttonEdit">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
         <horstretch>0</horstretch>
@@ -138,6 +141,9 @@
     </item>
     <item>
      <widget class="QPushButton" name="buttonDelete">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
       <property name="palette">
        <palette>
         <active>
