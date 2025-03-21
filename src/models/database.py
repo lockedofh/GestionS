@@ -1,7 +1,7 @@
 import sqlite3
 import config
 
-class DB_Manager(object):
+class DBManager(object):
     _conn: sqlite3.Connection
     
     @classmethod
@@ -16,7 +16,7 @@ class DB_Manager(object):
     @classmethod
     def get_connection(cls) -> sqlite3.Connection:
         if not cls._conn:
-            DB_Manager.open_connection()
+            DBManager.open_connection()
         return cls._conn
 
     @classmethod

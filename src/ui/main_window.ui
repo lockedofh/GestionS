@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>732</width>
-    <height>516</height>
+    <height>511</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <bool>false</bool>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-image: url('ruta/a/imagen.jpg'); background-position: center; background-repeat: no-repeat;</string>
+    <string notr="true">background-image: url('src\resources\main_window_bg.jpg');</string>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
@@ -35,24 +35,24 @@
      <height>22</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuProve_dors">
+   <widget class="QMenu" name="menuVendors">
     <property name="title">
      <string>Proveïdors</string>
     </property>
    </widget>
-   <widget class="QMenu" name="menuFacrures">
+   <widget class="QMenu" name="menuInvoices">
     <property name="title">
      <string>Factures</string>
     </property>
    </widget>
-   <widget class="QMenu" name="menuInformes">
+   <widget class="QMenu" name="menuReports">
     <property name="title">
      <string>Informes</string>
     </property>
    </widget>
-   <addaction name="menuProve_dors"/>
-   <addaction name="menuFacrures"/>
-   <addaction name="menuInformes"/>
+   <addaction name="menuVendors"/>
+   <addaction name="menuInvoices"/>
+   <addaction name="menuReports"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

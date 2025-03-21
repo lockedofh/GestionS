@@ -1,4 +1,4 @@
-from database import DB_Manager
+from database import DBManager
 from datetime import date
 
 class InvoiceModel(object):
@@ -8,7 +8,7 @@ class InvoiceModel(object):
         Makes sure the table INVOICES exists, if not creates it.º
         """
         try:
-            conn = DB_Manager.get_connection()        
+            conn = DBManager.get_connection()        
             cursor = conn.cursor()
             create_query = """
             CREATE TABLE IF NOT EXISTS INVOICES (
@@ -23,7 +23,7 @@ class InvoiceModel(object):
             );
             """
             cursor.execute(create_query)
-            DB_Manager.close_connection()
+            DBManager.close_connection()
             return "OK"
         except Exception as error:
             return "An error occured when creating invoices table: {error}"
@@ -41,14 +41,14 @@ class InvoiceModel(object):
         Return:             return 'OK' in case the query was correctly executed. Otherwise returns the error raised
         """
         try:
-            conn = DB_Manager.get_connection()
+            conn = DBManager.get_connection()
             cursor = conn.cursor()
             insert_query = """
             INSERT INTO INVOICES
             (?, ?, ?, ?, ?, ?)
             """
             cursor.execute(insert_query, (nif, id_invoice, emitted_date, effective_date, base, vat))
-            DB_Manager.close_connection()
+            DBManager.close_connection()
             return "OK"
         except Exception as error:
             return "An error occured when inserting invoice {id_invoice} into invoices table: {error}"
@@ -71,7 +71,7 @@ class InvoiceModel(object):
         Return:                 return 'OK' in case the query was correctly executed. Otherwise returns the error raised
         """
         try:
-            conn = DB_Manager.get_connection()
+            conn = DBManager.get_connection()
             cursor = conn.cursor()
             update_query = """
             UPDATE INVOICES 
@@ -79,7 +79,7 @@ class InvoiceModel(object):
             WHERE NIF = (?) AND ID_INVOICE = (?)
             """
             cursor.execute(update_query, (new_nif, new_id_invoice, emitted_date, effective_date, base, vat, old_nif, old_id_invoice))
-            DB_Manager.close_connection()
+            DBManager.close_connection()
             return "OK"
         except Exception as error:
             return "An error occured when updating invoice {old_id_invoice} from invoices table: {error}"
@@ -93,14 +93,14 @@ class InvoiceModel(object):
         Return:                 return 'OK' in case the query was correctly executed. Otherwise returns the error raised
         """
         try:
-            conn = DB_Manager.get_connection()
+            conn = DBManager.get_connection()
             cursor = conn.cursor()
             delete_query = f"""
             DELETE FROM INVOICES
             WHERE NIF = (?) AND ID_INVOICE = (?)
             """
             cursor.execute(delete_query, (nif))
-            DB_Manager.close_connection()
+            DBManager.close_connection()
             return "OK"
         except Exception as error:
             return "An error occured when deleting invoice {id_invoice} from invoices table: {error}"
