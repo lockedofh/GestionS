@@ -1,0 +1,7 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource prefix="/resources">
+        <file>images/main_window_bg.jpg</file>
+        <file>icons/error.png</file>
+    </qresource>
+</RCC>

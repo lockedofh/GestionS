@@ -10,7 +10,7 @@ class InvoicesView(QWidget):
     def __init__(self, parent:QWidget=None) -> None:
         super().__init__(parent)
         self.main_ui = Ui_ShowInvoices()
-        self.main_ui.setupUi(self)
+        # self.main_ui.setupUi(self)
 
 class AddInvoiceView(QWidget):
 

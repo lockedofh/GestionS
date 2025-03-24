@@ -10,7 +10,7 @@ class VendorsView(QWidget):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.main_ui = Ui_ShowVendors()
-        self.main_ui.setupUi(self)
+        # self.main_ui.setupUi(self)
 
 class AddVendorView(QWidget):
 

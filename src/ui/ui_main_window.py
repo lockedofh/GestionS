@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'main_window.ui'
+# Form implementation generated from reading ui file 'src\ui\main_window.ui'
 #
 # Created by: PyQt6 UI code generator 6.4.2
 #
@@ -15,7 +15,7 @@ class Ui_MainWindow(object):
         MainWindow.resize(732, 511)
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setAutoFillBackground(False)
-        self.centralwidget.setStyleSheet("background-image: url('src/resources/main_window_bg.jpg');background-position: center;background-repeat: no-repeat;")
+        self.centralwidget.setStyleSheet("")
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.centralwidget)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
@@ -33,9 +33,17 @@ class Ui_MainWindow(object):
         self.menuReports = QtWidgets.QMenu(parent=self.menubar)
         self.menuReports.setObjectName("menuReports")
         MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
-        self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
+        self.actionProva = QtGui.QAction(parent=MainWindow)
+        self.actionProva.setObjectName("actionProva")
+        self.mainVendorsAction = QtGui.QAction(parent=MainWindow)
+        self.mainVendorsAction.setObjectName("mainVendorsAction")
+        self.mainInvoicesAction = QtGui.QAction(parent=MainWindow)
+        self.mainInvoicesAction.setObjectName("mainInvoicesAction")
+        self.mainreportsAction = QtGui.QAction(parent=MainWindow)
+        self.mainreportsAction.setObjectName("mainreportsAction")
+        self.menuVendors.addAction(self.mainVendorsAction)
+        self.menuInvoices.addAction(self.mainInvoicesAction)
+        self.menuReports.addAction(self.mainreportsAction)
         self.menubar.addAction(self.menuVendors.menuAction())
         self.menubar.addAction(self.menuInvoices.menuAction())
         self.menubar.addAction(self.menuReports.menuAction())
@@ -49,3 +57,7 @@ class Ui_MainWindow(object):
         self.menuVendors.setTitle(_translate("MainWindow", "Proveïdors"))
         self.menuInvoices.setTitle(_translate("MainWindow", "Factures"))
         self.menuReports.setTitle(_translate("MainWindow", "Informes"))
+        self.actionProva.setText(_translate("MainWindow", "Prova"))
+        self.mainVendorsAction.setText(_translate("MainWindow", "Mostra"))
+        self.mainInvoicesAction.setText(_translate("MainWindow", "Mostra"))
+        self.mainreportsAction.setText(_translate("MainWindow", "Mostra"))

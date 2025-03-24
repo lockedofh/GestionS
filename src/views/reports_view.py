@@ -7,4 +7,4 @@ class ReportsView(QWidget):
     def __init__(self, parent:QWidget=None) -> None:
         super().__init__(parent)
         self.main_ui = Ui_ShowReports()
-        self.main_ui.setupUi(self)
+        # self.main_ui.setupUi(self)

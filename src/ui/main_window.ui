@@ -18,13 +18,9 @@
     <bool>false</bool>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-image: url('src\resources\main_window_bg.jpg');</string>
+    <string notr="true"/>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout_2">
-    <item>
-     <layout class="QVBoxLayout" name="verticalLayout"/>
-    </item>
-   </layout>
+   <layout class="QVBoxLayout" name="verticalLayout_2"/>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -39,23 +35,47 @@
     <property name="title">
      <string>Proveïdors</string>
     </property>
+    <addaction name="mainVendorsAction"/>
    </widget>
    <widget class="QMenu" name="menuInvoices">
     <property name="title">
      <string>Factures</string>
     </property>
+    <addaction name="mainInvoicesAction"/>
    </widget>
    <widget class="QMenu" name="menuReports">
     <property name="title">
      <string>Informes</string>
     </property>
+    <addaction name="mainreportsAction"/>
    </widget>
    <addaction name="menuVendors"/>
    <addaction name="menuInvoices"/>
    <addaction name="menuReports"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionProva">
+   <property name="text">
+    <string>Prova</string>
+   </property>
+  </action>
+  <action name="mainVendorsAction">
+   <property name="text">
+    <string>Mostra</string>
+   </property>
+  </action>
+  <action name="mainInvoicesAction">
+   <property name="text">
+    <string>Mostra</string>
+   </property>
+  </action>
+  <action name="mainreportsAction">
+   <property name="text">
+    <string>Mostra</string>
+   </property>
+  </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="../resources/resources.qrc"/>
+ </resources>
  <connections/>
 </ui>
